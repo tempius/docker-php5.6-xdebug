@@ -6,8 +6,8 @@ RUN pecl install xdebug-2.5.5 \
 
 RUN a2enmod rewrite
 
+#   printf "zend_extension=/usr/local/lib/php/extensions/no-debug-non-zts-20131226/xdebug.so\n" >> /usr/local/etc/php/conf.d/20-xdebug.ini;
 RUN touch /usr/local/etc/php/conf.d/20-xdebug.ini; \
-    printf "zend_extension=/usr/local/lib/php/extensions/no-debug-non-zts-20131226/xdebug.so\n" >> /usr/local/etc/php/conf.d/20-xdebug.ini; \
     printf "xdebug.remote_enable = 1\n" >> /usr/local/etc/php/conf.d/20-xdebug.ini; \
     printf "xdebug.remote_autostart = 1\n" >> /usr/local/etc/php/conf.d/20-xdebug.ini; \
     printf "xdebug.remote_handler = dbgp\n" >> /usr/local/etc/php/conf.d/20-xdebug.ini; \
