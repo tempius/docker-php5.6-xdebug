@@ -1,5 +1,5 @@
-# PHP 5.6.40 with xdebug
-FROM php:5.6.40-apache-stretch
+# PHP 5.6 with xdebug
+FROM php:5.6-apache
 
 RUN pecl install xdebug-2.5.5 \
     docker-php-ext-enable xdebug-2.5.5
